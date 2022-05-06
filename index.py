@@ -49,7 +49,7 @@ def create_year_dict(file_name, file_name_two):
             line[_i] = int(line[_i])
 
 
-    last_diff = int(lines[-1][1]) - int(lines[-1][-1])
+    last_diff = int(lines[-1][-1]) - int(lines[-1][1])
 
     job_diff = []
 
@@ -77,9 +77,6 @@ def create_year_dict(file_name, file_name_two):
 
     print(f"Democrat total increase in jobs: {final_summ_dem}")
     print(f"Republican total increase in jobs: {final_summ_rep}")
-
-    for _i in range(6):
-        print(f"Party: {lines_presidents[_i][1]} Year: {lines[_i][0]} Jobs Created: {job_diff[_i]}")
 
 
 
@@ -147,6 +144,7 @@ def write_conclusions():
 
 if __name__ == "__main__":
     main()
+
 
 
 
